@@ -1,0 +1,56 @@
+.thumbnails-assine
+    align-items: stretch
+    @extend .flex
+    flex-flow: row wrap 
+    +mq(414px, max)
+        flex-flow: column wrap
+    margin: 15px auto
+    justify-content: space-between
+    width: 100%
+    >li 
+        flex: 1
+        +mq(414px, max)
+            flex: 0 0 auto 
+            width: 100%
+            &:not(:last-child)
+                margin-bottom: 15px
+        &:not(:last-child)
+            padding-right: 7.5px
+            +mq(414px, max)
+                padding-right: 0
+        &:not(:first-child)
+            padding-left: 7.5px
+            +mq(414px, max)
+                padding-left: 0
+        >img 
+            display: block
+            width: 100%
+.vantagens
+    align-items: flex-end
+    justify-content: center
+    @extend .thumbnails-assine
+    +mq('1090px', max)
+        margin-top: -30px
+    text-align: center
+    img,h3
+        display: block
+    h3 
+        color: $yellow
+        font-family: 'Maven Pro', sans-serif
+        font-weight: 800
+        +rem('font-size', 14px)      
+        text-transform: uppercase
+    >li 
+        +mq('1090px', max)
+            margin-top: 30px
+            flex: 0 0 auto
+            width: 16%
+            +mq('890px', max)
+                width: 25%
+                +mq('737px', max)
+                    width: 50%
+                    +mq('414px', max)
+                        width: 100%
+        >img 
+            margin: 0 auto 7.5px
+            width: auto
