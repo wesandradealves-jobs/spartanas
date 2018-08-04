@@ -1,0 +1,71 @@
+section
+    &:not(:last-of-type)
+        margin-bottom: 70px 
+    &.-seguranca
+        align-content: center
+        @extend .flex
+        flex-flow: row wrap 
+        justify-content: space-between
+        >span 
+            flex: 0 0 auto
+            +mq('736px', max)
+                display: none
+            >img 
+                width: 100% 
+        >p 
+            color: white 
+            flex: 1
+            padding-left: 35px
+            +mq('736px', max)
+                padding-left: 0
+.title
+    &.-ribbon
+        &::after
+            content: url(http://clubspartanas.com.br/wp-content/uploads/2018/08/separator-small.png)
+            display: block 
+            margin: 15px auto 0
+.grid-book
+    align-items: stretch 
+    @extend .flex
+    flex-flow: row wrap 
+    justify-content: space-between
+    margin-top: 25px
+    >div 
+        flex: 0 0 auto 
+        position: relative
+        >div 
+            background-position: center center 
+            background-size: 100% 100% 
+            background-repeat: no-repeat
+            min-height: 100%
+        &.md 
+            &:first-of-type
+                padding-right: 7.5px
+                +mq('414px', max)
+                    padding-bottom: 15px
+                    padding-right: 0
+                &+div 
+                    padding-left: 7.5px
+                    +mq('414px', max)
+                        padding-left: 0
+            width: 50%
+            +mq('414px', max)
+                width: 100%
+            >div 
+                padding: 0 0 67%
+        &.sm
+            padding-top: 15px
+            &:nth-child(3)
+                &, & ~ *:not(:last-child)
+                    padding-right: 7.5px
+                    +mq('414px', max)
+                        padding-right: 0
+            &:not(:nth-child(3))
+                    padding-left: 7.5px 
+                    +mq('414px', max)
+                        padding-left: 0
+            width: 33.333%
+            +mq('414px', max)
+                width: 100%
+            >div 
+                padding: 0 0 150%

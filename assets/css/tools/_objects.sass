@@ -1,0 +1,160 @@
+textarea,
+input
+    &[placeholder]
+        color: lightgray
+        font-weight: 300
+        opacity: 1
+        text-overflow: ellipsis
+    &::-moz-placeholder
+        color: lightgray
+        font-weight: 300
+        opacity: 1
+        text-overflow: ellipsis
+    &::-webkit-input-placeholder
+        color: lightgray
+        font-weight: 300
+        opacity: 1
+        text-overflow: ellipsis
+    &:-ms-input-placeholder 
+        color: lightgray
+        font-weight: 300
+        opacity: 1
+        text-overflow: ellipsis
+
+.flex  
+    display: -webkit-box
+    display: -ms-flexbox
+    display: -webkit-flex
+    display: flex    
+
+.container
+    display: block
+    max-width: 1200px
+    margin: 0 auto
+    padding-left: 15px
+    padding-right: 15px
+
+#wrap
+    overflow: hidden
+
+.logo 
+    img,svg
+        height: auto
+        max-width: 100%
+
+.title
+    font-family: 'Arial Black'
+    font-weight: 800
+    text-transform: uppercase
+    &.-left
+        color: white 
+        text-align: left
+        +mq('568px', max)
+            text-align: center
+        margin-bottom: 15px
+    &.-intro
+        color: $yellow
+        +rem('font-size',43px)
+        +mq('736px', max)
+            +rem('font-size', 35px)
+            +mq('414px', max)
+                +rem('font-size', 22px)
+        >span
+            +rem('line-height',53px)
+            +mq('414px', max)
+                +rem('line-height',33px)
+            &:nth-child(2)
+                +rem('font-size', 66px)
+                +mq('736px', max)
+                    +rem('font-size', 53px)
+                    +mq('414px', max)
+                        +rem('font-size', 33px)
+            &:last-child
+                +rem('font-size', 50px)
+                +mq('736px', max)
+                    +rem('font-size', 40px)
+                    +mq('414px', max)
+                        +rem('font-size', 25px)
+                color: $red
+    &.-sub-intro
+        color: white
+        margin: 65px auto
+        +rem(('font-size':24px, 'line-height':34px))
+        +mq('640px', max)
+            +rem('font-size', 19px)
+        >span 
+            >span
+                color: white
+            &.destaque
+                +rem('font-size', 36px)
+                +mq('736px', max)
+                    +rem('font-size', 25px)
+                    +mq('568px', max)
+                        +rem('font-size', 17px)
+    &[class*="intro"]
+        text-align: center 
+        >span 
+            display: block 
+            >span 
+                display: inline-block
+    &.destaque,
+    .destaque
+        color: $yellow
+        font-family: 'Cinzel Decorative', cursive
+        font-weight: initial
+    &.destaque
+        +mq('568px', max)
+            font-family: 'Arial Black'
+            +rem('font-size', 17px)
+            text-align: center
+
+    
+p 
+    color: white
+    +rem(('font-size':16px, 'line-height':19px)) 
+    +mq('568px', max)
+        text-align: center
+    strong 
+        color: $yellow
+
+html,
+body 
+    background-color: black
+
+.page
+    @extend .container
+    max-width: 1135px
+    padding: 50px 85px
+    +mq('568px', max)
+        padding-left: 15px
+        padding-right: 15px
+
+.iframe
+    display: block
+    height: 0
+    overflow: hidden
+    padding-bottom: 56.25%
+    position: relative
+    width: 100%
+    iframe,
+    object
+        display: inherit
+        height: 100%
+        left: 0
+        position: absolute
+        top: 0
+        width: inherit
+
+.btn-default
+    background-color: $yellow
+    +border(15px)
+    color: $brown
+    display: block 
+    font-family: 'Arial Black'
+    font-weight: 800px
+    +rem('font-size', 26px)
+    margin: 55px auto  
+    max-width: 186px
+    padding: 15px 30px
+    text-transform: uppercase
+    width: 100%
